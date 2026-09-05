@@ -1,0 +1,159 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="all">
+    <div class="all1" id="home">
+    <header class="head">
+        <nav>
+            <div class="logo"><a href="#"><span>Book</span>Path</a></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="body-book">
+
+        <div class="text-book">
+        <h1>Your next chapter starts here.</h1>
+        <h2>Between pages we find ourselves.</h2>
+        <p>
+            Books serve as profound, transformative gateways to infinite human imagination and collective wisdom, effortlessly transporting readers across historical eras, distant galaxies, and vibrant global cultures. Far beyond merely storing factual information, they spark creative thought, challenge our ingrained perspectives, and cultivate deep empathy by revealing the intricate nuances of human experience and emotion. In our fast-paced, digital world, opening a physical or digital book offers an invaluable sanctuary of focused contemplation. Every single turned page presents a unique opportunity to explore new ideas, acquire critical insights, and experience countless lives from the quiet sanctuary of your home.
+        </p>
+        </div>
+            <img class="img1-book" src="books photos/ea38f962-3f3a-40d1-b494-0980e42473f8.jpg" alt="book1">
+    </div>
+    
+        <img class="img2-book" src="books photos/86a29817-23c9-4b7a-b67c-92220eddc94d.jpg" alt="book2">
+    </div>
+
+    <div class="all2" id="categories">
+        <div class="cat1">
+            <a onclick="showCategory('novel')" href="#products"><img src="books photos 2/y1.png" alt="Novels"></a>
+            <a onclick="showCategory('tech')" href="#products"><img id="gg" src="books photos 2/y8.png" alt="Technology"></a>
+            <a onclick="showCategory('finance')" href="#products"><img src="books photos 2/y3.png" alt="Finance"></a>
+        </div>
+
+         <div class="cat2">
+            <a onclick="showCategory('history')" href="#products"><img src="books photos 2/y4.png" alt="History"></a>
+            <a onclick="showCategory('poetry')" href="#products"><img src="books photos 2/y6.png" alt="Poetry"></a>
+            <a onclick="showCategory('bio')" href="#products"><img src="books photos 2/y5.png" alt="Biography"></a>
+        </div>
+    </div>
+
+    <div class="all3" id="products">
+
+     <div class="header2">
+        <div class="text-book2">
+            <h1>Products</h1>
+            <p>Browse our collection of books across<br>technology, finance, poetry and biography.</p>
+        </div>
+
+        <div class="ic">
+            <button onclick="showBooks(books)" id="products">Show All Products</button>
+            <div class="icc">
+            <i onclick="openCart()" class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+            </div>
+            <input oninput="Search(this.value)" id="Search" type="text" placeholder="Search">
+        </div>
+
+     </div>
+     <div class="cart-overlay" id="cart">
+    <div class="cart-box">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" onclick="closeCart()">✕</button>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="subtotal-box">
+                <span>Subtotal</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+            <div class="cart-brand">
+                <i class="fa-solid fa-book-open"></i>
+                <div>
+                    <p class="b1">BookPath</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+     <div class="product-container">
+       
+     </div>
+      <div class="pagination">
+        <button id="pag1" class="pag">&lt;</button>
+        <button id="pag2" class="pag">1</button>
+        <button id="pag3" class="pag">2</button>
+        <button id="pag4" class="pag">3</button>
+        <button id="pag5" class="pag">4</button>
+        <button id="pag6" class="pag">5</button>
+        <button id="pag7" class="pag">&gt;</button>
+    </div>
+
+    <div class="all4" id="reviews">
+        <div class="header3">
+            <h1>Reviews</h1>
+            <p>See what our customers say about us.</p>
+        </div>
+
+        <div class="rev">     
+        </div>
+        <div class="pagination2">
+        <button id="pagi1" class="pagi">&lt;</button>
+        <button id="pagi2" class="pagi">1</button>
+        <button id="pagi3" class="pagi">2</button>
+        <button id="pagi4" class="pagi">3</button>
+        <button id="pagi5" class="pagi">4</button>
+        <button id="pagi6" class="pagi">5</button>
+        <button id="pagi7" class="pagi">&gt;</button>
+    </div>
+    </div>
+    <div class="all5" id="contact">
+        <div class="text-book3">
+            <h1>Contact Us</h1>
+            <h3>You can reach us through any of the following platforms.</h3>
+        </div>
+        <div class="contacts">
+            <div class="contact" id="contact1">
+                <a href="tel:+201285074169" target="_blank"><i class="fa-solid fa-phone"></i></a>
+                <h4>Phone</h4>
+                <p>01285074169</p>
+            </div>
+            <div class="contact" id="contact2">
+                <a href="https://wa.me/201285074169" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <h4>WhatsApp</h4>
+                <p>01285074169</p>
+            </div>
+            <div class="contact" id="contact3">
+                <a href="https://www.instagram.com/abanoub_ashraf5?igsi=aW41cTcxdXlsMHRy" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <h4>Instagram</h4>
+                <p>abanoub_ashraf5</p>
+            </div>
+            <div class="contact" id="contact4">
+                <a href="https://www.facebook.com/share/1GeWhwr7BB/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <h4>Facebook</h4>
+                <p>Abanoub Ashraf</p>
+            </div>
+        </div>
+        <h3 id="h31">© 2026 BookPath. All rights reserved.</h3>
+    </div>
+</div>    
+    <script src="book.js"></script>
+</body>
+</html>
